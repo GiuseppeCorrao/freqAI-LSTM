@@ -111,7 +111,7 @@
       "trainer_kwargs": {
         "n_steps": null,
         "batch_size": 32,
-        "n_epochs": 10,
+        "n_epochs": 10
       },
       "model_kwargs": {
         "num_lstm_layers": 3,
@@ -121,5 +121,33 @@
       }
     }
   },
-  //telegram and api
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "username": "freqtrader",
+        "password": "freqtrade"
+        },
+        "telegram": {
+        "enabled": true,
+        "token": "7bJJHdIqEBRkzpfuE8T9HUH8fY19kCMWWwJyqtshTCzYdEvWhGe1maorO1OGRD8N",
+        "chat_id": "344412943",
+        "notification_settings": {
+            "status": "on",
+            "warning": "on",
+            "startup": "on",
+            "entry": "on",
+            "entry_fill": "on"
+        }
+      },
+    "bot_name": "freqtrade",
+    "db_url": "sqlite:///tradesv3.sqlite",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5,
+        "heartbeat_interval": 60
+    }
 }
